@@ -1,0 +1,8 @@
+---
+- name: Install all needed packages
+  import_tasks: install.yml
+  tags: install
+
+- name: Configure package
+  import_tasks: configure.yml
+  tags: config
