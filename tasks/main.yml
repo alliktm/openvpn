@@ -1,8 +1,10 @@
 ---
 - name: Install all needed packages
   import_tasks: install.yml
-  tags: install
+  tags: install, openvpn-client
+  when: openvpn_scene_install
 
 - name: Configure package
   import_tasks: configure.yml
-  tags: config
+  tags: config, openvpn-client
+  when: openvpn_scene_config

@@ -4,9 +4,16 @@
     update_cache: yes
     cache_valid_time: 86400
 
+
 - name: Install "openvpn" package
   apt:
     name: '{{ item }}'
     state: present
   with_items:
     openvpn={{ openvpn_version}}
+
+
+- name: Enable openvpn service
+  systemd:
+    name: openvpn@{{ openvpn_config_name}}
+    enabled: yes

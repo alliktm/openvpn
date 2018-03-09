@@ -2,13 +2,7 @@
 - name: Copy clients config file
   template:
     src: '{{ item }}'
-    dest: '{{ openvpn_config_dir }}/{{ openvpn_config_name }}'
+    dest: '/etc/openvpn/{{ openvpn_config_name }}.conf'
   with_items:
-    - etc/openvpn/{{ openvpn_config_name}}.j2
+    - etc/openvpn/{{ openvpn_config_name}}.conf.j2
   notify: restart openvpn
-
-- name: Enable and start openvpn service
-  systemd:
-    name: openvpn
-    state: started
-    enabled: yes

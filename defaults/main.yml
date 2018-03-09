@@ -70,7 +70,9 @@ openvpn_client_key: |-
     2TSNrZHsAdIhUOuEgiY8LMT2crrIyuiPU1gmmbzcMRLO294IPrsFIfI4SkRzui09
     zKMH5YyzNqjlOuFt5llWzJKr
     -----END PRIVATE KEY-----
-openvpn_config_name: client.ovpn
+openvpn_config_name: client
+openvpn_scene_install: true
+openvpn_scene_config: true
 openvpn_server_connect: 8.8.8.8
 openvpn_server_port: 2195
 openvpn_server_proto: udp
@@ -93,3 +95,4 @@ openvpn_tls_key: |-
   02665a537229763eb4bfa25620af4eee
   4b36a131e09eb5e7d7a013d7ffd365f0
   -----END OpenVPN Static key V1-----
+openvpn_version: 2.3.10-1ubuntu2.1
