@@ -26,9 +26,11 @@ openvpn_tls_key: Text, contains openvpn static key
 openvpn_version: openvpn package version
 
 openvpn_scene_install: false
+    
     Set a variable if you do not want to install. Default - True
 
 openvpn_scene_config: false
+    
     Set a variable if you do not want to configure. Default - False
 
 
